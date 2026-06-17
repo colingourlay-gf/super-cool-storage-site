@@ -1,0 +1,15 @@
+{
+  "name": "super-cool-storage-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Super Cool Storage — marketing one-pager (Railway static host).",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
