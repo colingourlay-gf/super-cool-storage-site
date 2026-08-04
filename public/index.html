@@ -119,6 +119,7 @@
         <a class="link" href="#features">Why us</a>
         <a class="link" href="#sizes">Unit sizes</a>
         <a class="link" href="#visit">Visit</a>
+        <a class="btn btn-ghost" href="#" data-account>My Account</a>
         <a class="btn btn-primary" href="#" data-reserve>Reserve a unit</a>
       </nav>
     </div>
@@ -262,7 +263,17 @@
     document.querySelectorAll('[data-reserve]').forEach(function (el) {
       el.setAttribute('href', window.RESERVE_URL);
     });
+    // My Account → portal login.
+    document.querySelectorAll('[data-account]').forEach(function (el) {
+      el.setAttribute('href', window.RESERVE_URL.replace(/\/+$/, '') + '/login');
+    });
     document.getElementById('yr').textContent = new Date().getFullYear();
   </script>
+
+  <!-- Akiba storage assistant (same embeddable widget as the portal; works on any site). -->
+  <script async src="https://mcp.getakiba.io/chatbot.js"
+          data-key="akm_w6iUbY4HL6aiaFxBN9FYWI2jgEcwlucrkO8eC4nt"
+          data-accent="#ff6a2c"
+          data-title="Super Cool Storage"></script>
 </body>
 </html>
